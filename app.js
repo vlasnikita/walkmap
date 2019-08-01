@@ -1,6 +1,7 @@
 const http = require('http');
 const totem = require('./totem.json')
 const cone = require('./cone.json')
+const wc = require('./wc.json')
 const exit1 = require('./exit1.json')
 const exit2 = require('./exit2.json')
 const exit3 = require('./exit3.json')
@@ -22,7 +23,9 @@ let app = http.createServer((req, res) => {
         case '/totem':
             res.end(JSON.stringify(totem));
         case '/cone':
-            res.end(JSON.stringify(cone));            
+            res.end(JSON.stringify(cone));  
+        case '/wc':
+            res.end(JSON.stringify(wc));            
         case '/exit1':
             res.end(JSON.stringify(exit1));
         case '/exit2':
